@@ -393,7 +393,7 @@ The correspondence is given by $\sigma(L)=f(L)$ and $\tau(Y)=f^{-1}(Y)$. Moreove
     $x\in Kl\subseteq L$, as $K\subseteq L$.
     Conversely, if $l\in L$, then $f(l)\in f(L)$. Thus $l\in f^{-1}(f(L))$.
 
-    We now prove that $\sigma\circ\tau=\id_\mathcal{B}$. If  $Y\in\mathcal{B}$, then $\sigma(\tau(Y))=Y$. If $y\in Y\subseteq f(G)$, then $y=f(x)$ for some $x\in G$, that is $x\in f^{-1}(y)$. This implies that $y=f(x)\in f(f^{-1}(Y))$. Conversely, if $y\in f(f^{-1}(Y))$, then $y=f(x)$ for some $x\in f^{-1}(Y)$. This implies that $y=f(x)\in Y$.
+    We now prove that $\sigma\circ\tau=\id_\mathcal{B}$, this is, if  $Y\in\mathcal{B}$ then $\sigma(\tau(Y))=Y$. If $y\in Y\subseteq f(G)$, then $y=f(x)$ for some $x\in G$, that is $x\in f^{-1}(y)$. This implies that $y=f(x)\in f(f^{-1}(Y))$. Conversely, if $y\in f(f^{-1}(Y))$, then $y=f(x)$ for some $x\in f^{-1}(Y)$. This implies that $y=f(x)\in Y$.
 
     It is an exercise to show that 
     $X\leq Y$ if and only if $f(X)\leq f(Y)$.
@@ -410,62 +410,69 @@ The correspondence is given by $\sigma(L)=f(L)$ and $\tau(Y)=f^{-1}(Y)$. Moreove
     $xLx^{-1}\subseteq L$, which means that $L$ is normal in~$G$. 
 \end{proof}
 
-\begin{proposition}
-    If $f\colon G\to f(G)$ is a surjective group homomorphism 
-    and $H\leq G$ is such that $K=\ker f
-\subseteq H$, then
-        $(G:H)=(f(G):f(H))$.
-\end{proposition}
+% \begin{proposition}
+%     If $f\colon G\to f(G)$ is a surjective group homomorphism 
+%     and $H\leq G$ is such that $K=\ker f
+% \subseteq H$, then
+%         $(G:H)=(f(G):f(H))$.
+% \end{proposition}
 
-\begin{proof}
-% By the correspondence theorem, 
-% there is a bijective correspondence 
+% \begin{proof}
+% % By the correspondence theorem, 
+% % there is a bijective correspondence 
+% % \[
+% % \begin{tikzcd}
+% %         {\{L:K\leq L\leq G\}} & {\{Y:Y\leq f(G)\}}
+% %         \arrow[shift left=1, from=1-1, to=1-2]
+% %         \arrow[shift left=1, from=1-2, to=1-1]
+% % \end{tikzcd}
+% % \]
+% % given by $H\mapsto f(H)$ and 
+% % $f^{-1}(T)\mapsfrom T$. 
+% Let $H\leq G$ be such that
+% $\ker f\subseteq H$ and 
 % \[
-% \begin{tikzcd}
-%         {\{L:K\leq L\leq G\}} & {\{Y:Y\leq f(G)\}}
-%         \arrow[shift left=1, from=1-1, to=1-2]
-%         \arrow[shift left=1, from=1-2, to=1-1]
-% \end{tikzcd}
+% \alpha\colon G/H\to f(G)/f(H),\quad \alpha(gH)=f(g)f(H).
 % \]
-% given by $H\mapsto f(H)$ and 
-% $f^{-1}(T)\mapsfrom T$. 
-Let $H\leq G$ be such that
-$\ker f\subseteq H$ and 
-\[
-\alpha\colon G/H\to f(G)/f(H),\quad \alpha(gH)=f(g)f(H).
-\]
 
-Let us show that $\alpha$ is well-defined. Assume that 
-$gH=g_1H$. Then $g_1^{-1}g\in H$ and 
-\[
-  f(g_1)^{-1}f(g)=f(g_1^{-1}g)\in f(H).
-\]
-This implies that $f(g_1)f(H)=f(g)f(H)$. 
-%It is an exercise to show that $\alpha$ is a well-defined map. 
+% Let us show that $\alpha$ is well-defined. Assume that 
+% $gH=g_1H$. Then $g_1^{-1}g\in H$ and 
+% \[
+%   f(g_1)^{-1}f(g)=f(g_1^{-1}g)\in f(H).
+% \]
+% This implies that $f(g_1)f(H)=f(g)f(H)$. 
+% %It is an exercise to show that $\alpha$ is a well-defined map. 
 
-We need to show that $\alpha$ is bijective, as then 
-\[
-(G:H)=|G/H|=|f(G)/f(H)|=(f(G):f(H)).
-\]
+% We need to show that $\alpha$ is bijective, as then 
+% \[
+% (G:H)=|G/H|=|f(G)/f(H)|=(f(G):f(H)).
+% \]
 
-First, we show that $\alpha$ is surjective. If $yf(H)\in f(G)/f(H)$, 
-then
-$y=f(g)$ for some $g\in G$ (because $f$ is surjective).Thus
-\[
-yf(H)=f(g)f(H)=f(gH)=\alpha(gH).
-\]
+% First, we show that $\alpha$ is surjective. If $yf(H)\in f(G)/f(H)$, 
+% then
+% $y=f(g)$ for some $g\in G$ (because $f$ is surjective). Thus
+% \[
+% yf(H)=f(g)f(H)=f(gH)=\alpha(gH).
+% \]
 
-We now show that $\alpha$ is injective. If $\alpha(gH)=\alpha(g_1H)$, then, 
-\[
-f(g)^{-1}f(g_1)=f(h)\in f(H)
-\]
-for some $h\in H$, that is 
-\[
-f(g_1)=f(g)f(h)=f(gh)
-\]
-for some $h\in H$. 
-This implies that $g_1=ghk$ for some $k\in\ker f\subseteq H$ and hence 
-$g_1=gh_1$ for some $h_1\in H$, that is $g_1H=gH$.
+% We now show that $\alpha$ is injective. If $\alpha(gH)=\alpha(g_1H)$, then, 
+% \[
+% f(g)^{-1}f(g_1)=f(h)\in f(H)
+% \]
+% for some $h\in H$, that is 
+%\[
+%f(g_1)=f(g)f(h)=f(gh)
+%\]
+%for some $h\in H$. 
+%This implies that $g_1=ghk$ for some $k\in\ker f\subseteq H$ and hence 
+%$g_1=gh_1$ for some $h_1\in H$, that is $g_1H=gH$.
+%\end{proof}
+
+\begin{corollary}
+    If $f\colon G\to H$ is a group homomorphism and $L\leq G$ such that $K = \ker f \subseteq L$, then $(G\colon L) = (f(G)\colon f(L)$.
+\end{corollary}
+\begin{proof}
+Consider the set $\{gLg^{-1}\mid g\in G}$. By normality of the kernel, this is a subset of $\{L'\mid K\leq L'\leq G\}$, and by the Correspondence Theorem this is in bijection with the set $\{f(g)f(H)f(g)^{-1}\mid g\in G\}$. Hence both sets are of equal size, proving the claim.
 \end{proof}
 
 In the case of the canonical homomorphism $\pi\colon
@@ -485,7 +492,7 @@ Let us show that every subgroup of
 \[
 Q_8=\{1,-1,i,-i,j,-j,k,-k\}
 \]
-is normal $Q_8$.
+is normal in $Q_8$.
 
 One way to verify that every subgroup of  $Q_8$ is normal is to list all its subgroups 
 and check their normality individually. The subgroups of $Q_8$ are $\{1\}$, $\{1,-1\}$, $\{1,-1,i,-i\}$, $\{1,-1,j,-j\}$, $\{1,-1,k,-k\}$ and $Q_8$. 
@@ -593,7 +600,7 @@ For the third claim, note that
 $G/N\simeq\Sym_4$ has four subgroups of order 
  3 (these are the subgroups generated by a 3-cycle),
 none normal in $G/N$. By the correspondence theorem, these
-subgroups correspond with four non-normal subgroups of $G$, all of order 15. 
+subgroups correspond with three non-normal subgroups of $G$, all of order 15. 
 \end{example}
 
 If $G$ is a group, $\Sym_G=\{f\colon G\to G:f\text{ bijective}\}$.
@@ -617,7 +624,7 @@ It follows that $G\simeq f(G)$, which is a subgroup of $\Sym_G$.
 Every finite group is isomorphic to a subgroup of some 
 $\Sym_n$. 
 In particular, using permutation matrices, 
-we see that every finite group 
+we see that every finite group is 
 isomorphic to a subgroup of $\GL_n(\Z)$ for some $n$.
 Those groups are known as \emph{linear groups}.
 
